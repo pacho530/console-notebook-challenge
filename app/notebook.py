@@ -12,9 +12,20 @@ class Note:
         self.text: str = text
         self.importance: str = importance
         self.creation_date = datetime.now()
-        tags: list[str] = list()
+        self.tags: list[str] = list()
 
     def add_tag(self, tag: str):
+        if tag not in self.tags:
+            self.tags.append(tag)
+
+    def __str__(self) ->str:
+        return f"Date: {self.creation_date}\n {self.title}: {self.text}"
+
+
+
+
+
+
 
 
 
